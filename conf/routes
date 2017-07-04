@@ -778,3 +778,9 @@ GET     /assets/javascripts/routes                      controllers.JSRouter.jsR
 # Map static resources from the /public folder to the /assets URL path
 # ------------------------------------------------------------------------------------------------------------------------
 GET     /assets/*file                                   controllers.Assets.at(path="/public", file)
+
+# Rest Api Calls
+GET         /api/getContact/:code                              controllers.admin.ContactApi.isContactHave(code:String)
+POST        /api/setContact                                    controllers.admin.ContactApi.addUpdateContact()
+POST        /api/setInvoice                                    controllers.admin.InvoiceApi.addInvoice()
+POST        /api/setProduct                                    controllers.admin.StockApi.addUpdateStock()

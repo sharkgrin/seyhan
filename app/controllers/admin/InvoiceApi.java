@@ -81,7 +81,7 @@ public class InvoiceApi {
                     String stockCode  = st.get("stockCode").asText();
                     stockCode = padStr(stockCode,"0",3);
                     log.info(stockCode);
-                    Stock stok = StockApi.find.where().ieq("code",stockCode).findList().get(0);
+                    Stock stok = StockModelApi.find.where().ieq("code",stockCode).findList().get(0);
                     detail.stock =  stok;
 
                     log.info("Burdayım Ordayım Stok : "+stok.name);

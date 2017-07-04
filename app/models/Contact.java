@@ -170,6 +170,8 @@ public class Contact extends BaseContactExtraFieldsModel {
 		return ModelHelper.findById(RIGHT, id);
 	}
 
+
+
 	public static boolean isUsedForElse(String field, Object value, Integer id) {
 		return ModelHelper.isUsedForElse(RIGHT, field, value, id);
 	}
